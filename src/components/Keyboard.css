@@ -8,7 +8,8 @@
     box-sizing: border-box;
     border: 1px solid blueviolet;
     width: 20px;
-    height: 20px;
+    height: 50px;
+    color: white;
 }
 
 .black:hover {
@@ -21,7 +22,8 @@
     box-sizing: border-box;
     border: 1px solid blueviolet;
     width: 20px;
-    height: 20px;
+    height: 50px;
+    color: black;
 }
 
 .white:hover {

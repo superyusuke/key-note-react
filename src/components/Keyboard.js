@@ -2,17 +2,26 @@ import React from 'react'
 import styles from './Keyboard.css'
 
 const Keyboard = ({keys}) => {
+  const octave = [
+    true,
+    false,
+    true,
+    false,
+    true,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+    true
+  ]
+
   const Keys = () => {
-    return keys.map((key,index) => {
-      if (key) {
-        return <li key={index} className={styles.white}>{key}</li>
-      }
+    return keys.map((key, index) => {
 
-      if (!key) {
-        return <li key={index} className={styles.black}>{key}</li>
-      }
-
-      return null
+      const css = octave[index] ? styles.white : styles.black
+      return <li key={index} className={css}>{key}</li>
     })
   }
   return (
