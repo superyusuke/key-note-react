@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Keyboard from './components/Keyboard'
+import KeyboardContainer from './containers/KeyboardContainer'
 
 class App extends Component {
   render() {
     return (
-      <Keyboard/>
+      <KeyboardContainer/>
     );
   }
 }

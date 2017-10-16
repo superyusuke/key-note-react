@@ -1,14 +1,24 @@
 import React from 'react'
 import styles from './Keyboard.css'
 
-const Keyboard = () => {
+const Keyboard = ({keys}) => {
+  const Keys = () => {
+    return keys.map((key,index) => {
+      if (key) {
+        return <li key={index} className={styles.white}>{key}</li>
+      }
+
+      if (!key) {
+        return <li key={index} className={styles.black}>{key}</li>
+      }
+
+      return null
+    })
+  }
   return (
-    <div className={styles.red}>
-      <ul>
-        <li className={styles.blue}>fjfjj</li>
-        <li>fjfjj</li>
-        <li>fjfjj</li>
-        <li>fjfjj</li>
+    <div>
+      <ul className={styles.list}>
+        <Keys/>
       </ul>
     </div>
   )

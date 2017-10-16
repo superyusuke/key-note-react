@@ -1,7 +1,29 @@
-.red {
-    background-color: red;
+.list {
+    list-style-type: none;
 }
 
-.blue {
-    background-color: blue;
+.black {
+    display: inline-block;
+    background-color: black;
+    box-sizing: border-box;
+    border: 1px solid blueviolet;
+    width: 20px;
+    height: 20px;
+}
+
+.black:hover {
+    background-color: grey;
+}
+
+.white {
+    display: inline-block;
+    background-color: white;
+    box-sizing: border-box;
+    border: 1px solid blueviolet;
+    width: 20px;
+    height: 20px;
+}
+
+.white:hover {
+    background-color: grey;
 }
