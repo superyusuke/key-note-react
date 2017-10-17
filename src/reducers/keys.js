@@ -1,10 +1,15 @@
 let key = {
   text: 'text',
-  on: true
+  on: false
+}
+
+let keyTrue = {
+  text: 'TEXT',
+    on: true
 }
 
 const doubleOctave = [
-  key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key
+  keyTrue,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key,key
 ]
 
 const defaultKeyboards = [

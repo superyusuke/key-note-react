@@ -1,3 +1,14 @@
+.keyInput {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: blueviolet;
+}
+
 .list {
     list-style-type: none;
     padding: 0;
@@ -6,6 +17,7 @@
 }
 
 .black {
+    position: relative;
     display: inline-block;
     background-color: black;
     box-sizing: border-box;
@@ -19,7 +31,25 @@
     background-color: grey;
 }
 
+.blackOn {
+    position: relative;
+    display: inline-block;
+    background-color: blue;
+    box-sizing: border-box;
+    border: 1px solid blueviolet;
+    width: 20px;
+    height: 50px;
+    color: white;
+}
+
+.blackOn:hover {
+    background-color: grey;
+}
+
+
+
 .white {
+    position: relative;
     display: inline-block;
     background-color: white;
     box-sizing: border-box;
@@ -30,5 +60,20 @@
 }
 
 .white:hover {
+    background-color: grey;
+}
+
+.whiteOn {
+    position: relative;
+    display: inline-block;
+    background-color: red;
+    box-sizing: border-box;
+    border: 1px solid blueviolet;
+    width: 20px;
+    height: 50px;
+    color: black;
+}
+
+.whiteOn:hover {
     background-color: grey;
 }
