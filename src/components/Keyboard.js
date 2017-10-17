@@ -21,9 +21,9 @@ const Keyboard = ({keys}) => {
 
   const Keys = () => {
     return keys.map((key, index) => {
-
-      const css = doubleOctave[index] ? styles.white : styles.black
-      return <li key={index} className={css}>{key}</li>
+      //const css = doubleOctave[index] ? styles.white : styles.black
+      const css = !key.on ? styles.white : styles.black
+      return <li key={index} className={css}>{index}{key.text}</li>
     })
   }
   return (
