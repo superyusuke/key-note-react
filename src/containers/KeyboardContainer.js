@@ -8,8 +8,13 @@ const mapStateToProps = (state) => {
 // アクション情報を渡す
 const mapDispatchToProps = dispatch => {
   return {
-    onChange: (text,name,data) => {
-      dispatch({type: 'CONSOLE', text: `text:${text} keyboardNum:${name} keyNum:${data}`})
+    onChange: (text, payload) => {
+      dispatch({
+        type: 'CONSOLE',
+        text: text,
+        keyboardNum: payload.keyboardIndex,
+        keyNum: payload.keyNum,
+      })
     },
   }
 }

@@ -20,9 +20,13 @@ const Keyboard = ({keys, onChange, keyboardIndex}) => {
   const doubleOctave = [...octave, ...octave]
 
   const KeyInput = ({text, onChange, keyboardIndex, keyNum}) => {
+    const payload = {
+      keyboardIndex,
+      keyNum
+    }
     return (
       <input className={styles.keyInput} onChange={e => onChange(
-        e.target.value, e.target.name, keyNum)} value={text} name={keyboardIndex} data={keyNum}/>
+        e.target.value, payload)} value={text} name={keyboardIndex} data={keyNum}/>
     )
   }
 
