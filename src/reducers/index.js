@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import keys from './keys'
+import keyboards from './keys'
 
 export default combineReducers({
-  keys
+  keyboards
 })

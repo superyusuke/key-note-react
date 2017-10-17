@@ -14,22 +14,22 @@ const Keyboard = ({keys}) => {
     false,
     true,
     false,
-    true
+    true,
   ]
+
+  const doubleOctave = [...octave, ...octave]
 
   const Keys = () => {
     return keys.map((key, index) => {
 
-      const css = octave[index] ? styles.white : styles.black
+      const css = doubleOctave[index] ? styles.white : styles.black
       return <li key={index} className={css}>{key}</li>
     })
   }
   return (
-    <div>
-      <ul className={styles.list}>
-        <Keys/>
-      </ul>
-    </div>
+    <ul className={styles.list}>
+      <Keys/>
+    </ul>
   )
 }
 

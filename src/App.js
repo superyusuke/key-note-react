@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-import KeyboardContainer from './containers/KeyboardContainer'
+import React, { Component } from 'react'
+import KeyboardsAreaContainer from './containers/KeyboardsAreaContainer'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <KeyboardContainer/>
-    );
+      <div>
+        <KeyboardsAreaContainer/>
+      </div>
+    )
   }
 }
 
-export default App;
+export default App
