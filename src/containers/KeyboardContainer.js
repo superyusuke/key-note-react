@@ -8,8 +8,8 @@ const mapStateToProps = (state) => {
 // アクション情報を渡す
 const mapDispatchToProps = dispatch => {
   return {
-    onChange: () => {
-      dispatch({type: 'ADD_TODO'})
+    onChange: (value) => {
+      dispatch({type: 'CONSOLE', text: value})
     },
   }
 }

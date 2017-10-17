@@ -17,7 +17,11 @@ const defaultKeyboards = [
 ]
 
 const keys = (state = defaultKeyboards, action) => {
-  switch (action) {
+  switch (action.type) {
+    case 'CONSOLE':
+      console.log(action.text)
+      return state
+
     case true:
       return true
     default:

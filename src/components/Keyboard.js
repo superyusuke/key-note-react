@@ -21,7 +21,7 @@ const Keyboard = ({keys,onChange}) => {
 
   const KeyInput = ({text,onChange}) => {
     return (
-      <input className={styles.keyInput} onChange={onChange} value={text}/>
+      <input className={styles.keyInput} onChange={e => onChange(e.target.value)} value={text}/>
     )
   }
 
