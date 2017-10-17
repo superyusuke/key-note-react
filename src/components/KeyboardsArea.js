@@ -1,5 +1,6 @@
 import React from 'react'
 import KeyboardContainer from '../containers/KeyboardContainer'
+import styles from './KeyboardsArea.css'
 
 const KeyboardsArea = ({keyboards}) => {
   const Keyboards = () => {
@@ -8,7 +9,7 @@ const KeyboardsArea = ({keyboards}) => {
     })
   }
   return (
-    <ul>
+    <ul className={styles.list}>
       <Keyboards/>
     </ul>
   )
