@@ -1,10 +1,10 @@
 import React from 'react'
-import Keyboard from '../components/Keyboard'
+import KeyboardContainer from '../containers/KeyboardContainer'
 
 const KeyboardsArea = ({keyboards}) => {
   const Keyboards = () => {
     return keyboards.map((keys, index) => {
-      return (<li key={index}><Keyboard keys={keys}/></li>)
+      return (<li key={index}><KeyboardContainer keys={keys}/></li>)
     })
   }
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Keyboard.css'
 
-const Keyboard = ({keys}) => {
+const Keyboard = ({keys,onChange}) => {
   const octave = [
     true,
     false,
@@ -19,9 +19,9 @@ const Keyboard = ({keys}) => {
 
   const doubleOctave = [...octave, ...octave]
 
-  const KeyInput = ({text}) => {
+  const KeyInput = ({text,onChange}) => {
     return (
-      <input className={styles.keyInput} value={text}/>
+      <input className={styles.keyInput} onChange={onChange} value={text}/>
     )
   }
 
@@ -50,7 +50,10 @@ const Keyboard = ({keys}) => {
 
       return (
         <li key={index} className={css()}>
-          <KeyInput text={key.text}/>
+          <KeyInput
+            text={key.text}
+            onChange={onChange}
+          />
         </li>
       )
     })
