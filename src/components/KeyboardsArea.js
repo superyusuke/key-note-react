@@ -5,7 +5,7 @@ import styles from './KeyboardsArea.css'
 const KeyboardsArea = ({keyboards}) => {
   const Keyboards = () => {
     return keyboards.map((keys, index) => {
-      return (<li key={index}><KeyboardContainer keys={keys}/></li>)
+      return (<li key={index}><KeyboardContainer keyboardIndex={index} keys={keys}/></li>)
     })
   }
   return (
