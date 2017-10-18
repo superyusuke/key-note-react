@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Keyboard from '../components/Keyboard'
+import {updateKey} from '../actions/TodoAction'
 
 const mapStateToProps = (state) => {
   return {}
@@ -8,18 +9,13 @@ const mapStateToProps = (state) => {
 // アクション情報を渡す
 const mapDispatchToProps = dispatch => {
   return {
-    onChange: (text, payload) => {
-      dispatch({
-        type: 'CONSOLE',
-        text: text,
-        keyboardNum: payload.keyboardIndex,
-        keyNum: payload.keyNum,
-      })
+    onChange: (payload) => {
+      dispatch(updateKey(payload))
     },
   }
 }
 
-// Component(React)へPropsとしてReduxをバインド
+// Component(React)へPropsとして Redux をバインド
 const KeyboardContainer = connect(
   mapStateToProps,
   mapDispatchToProps,

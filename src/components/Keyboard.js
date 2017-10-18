@@ -24,9 +24,15 @@ const Keyboard = ({keys, onChange, keyboardIndex}) => {
       keyboardIndex,
       keyNum
     }
+
+    const localOnChange = (text) => {
+      payload.text = text
+      onChange(payload)
+    }
+
     return (
-      <input className={styles.keyInput} onChange={e => onChange(
-        e.target.value, payload)} value={text} name={keyboardIndex} data={keyNum}/>
+      <input className={styles.keyInput} onChange={e => localOnChange(
+        e.target.value)} value={text} name={keyboardIndex} data={keyNum}/>
     )
   }
 
