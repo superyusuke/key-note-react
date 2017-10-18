@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Keyboard from '../components/Keyboard'
-import {updateKey} from '../actions/TodoAction'
+import {updateText} from '../actions/TodoAction'
 
 const mapStateToProps = (state) => {
   return {}
@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     onChange: (payload) => {
-      dispatch(updateKey(payload))
+      dispatch(updateText(payload))
     },
   }
 }

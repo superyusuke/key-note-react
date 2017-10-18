@@ -1,6 +1,6 @@
-export const updateKey = payload => {
+export const updateText = payload => {
   return {
-    type: 'UPDATE_KEY',
+    type: 'UPDATE_TEXT',
     text: payload.text,
     keyboardNum: payload.keyboardIndex,
     keyNum: payload.keyNum,
