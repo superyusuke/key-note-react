@@ -1,5 +1,5 @@
 let key1 = {
-  text: '',
+  text: '1',
   on: false,
 }
 

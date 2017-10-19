@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Keyboard.css'
+import KeyContainer from '../containers/KeyContainer'
 
 const Keyboard = ({keys, onChange, keyboardIndex}) => {
   const octave = [
@@ -18,24 +19,6 @@ const Keyboard = ({keys, onChange, keyboardIndex}) => {
   ]
 
   const doubleOctave = [...octave, ...octave]
-
-  const KeyInput = ({text, onChange, keyboardIndex, keyNum}) => {
-    const payload = {
-      keyboardIndex,
-      keyNum
-    }
-
-    const localOnChange = (e) => {
-      e.preventDefault()
-      payload.text = e.target.value
-      onChange(payload)
-    }
-
-    return (
-      <input className={styles.keyInput} onChange={e => localOnChange(
-        e)} value={text} name={keyboardIndex} data={keyNum}/>
-    )
-  }
 
   const Keys = () => {
     return keys.map((key, index) => {
@@ -62,7 +45,7 @@ const Keyboard = ({keys, onChange, keyboardIndex}) => {
 
       return (
         <li key={index} className={css()}>
-          <KeyInput keyboardIndex={keyboardIndex} keyNum={index} text={key.text} onChange={onChange}/>
+          <KeyContainer keyboardIndex={keyboardIndex} keyNum={index} text={key.text} onChange={onChange}/>
         </li>
       )
     })
