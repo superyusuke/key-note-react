@@ -3,6 +3,8 @@ import styles from './Keyboard.css'
 import KeyContainer from '../containers/KeyContainer'
 
 const Keyboard = ({keys, onChange, keyboardIndex}) => {
+  console.log('change')
+
   const octave = [
     true,
     false,

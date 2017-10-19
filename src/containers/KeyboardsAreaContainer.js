@@ -3,15 +3,16 @@ import KeyboardsArea from '../components/KeyboardsArea'
 
 const mapStateToProps = (state) => {
   return {
-    keyboards : state.keyboards
+    keyboards : state.keyboards,
+    title : state.title
   }
 }
 
 // アクション情報を渡す
 const mapDispatchToProps = dispatch => {
   return {
-    destoryTodo: (todoId) => {
-      dispatch(todoId)
+    onClick: () => {
+      dispatch({type: 'UPDATE_TITLE'})
     }
   }
 }
